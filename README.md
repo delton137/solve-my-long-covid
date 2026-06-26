@@ -11,18 +11,18 @@ unclear, recommends the single most informative next test (weighted by cost).
 
 ## Stack
 
-- **Next.js 15** (App Router) configured as a **static export** (`output: 'export'`) — no runtime server.
+- **Next.js 15** (App Router). Pages are statically prerendered (SSG); no user-specific server runtime.
 - TypeScript · Tailwind · Radix UI · zod · Vitest.
 - **Privacy by design:** the knowledge base and inference engine are pure functions bundled to the client.
   No user health data leaves the browser; the wizard persists a versioned blob to `localStorage` only.
-- Deploy target: **Cloudflare Pages** (static).
+- Deploy target: **Vercel** (Next.js framework preset).
 
 ## Commands
 
 ```bash
 npm install
 npm run dev          # local dev server
-npm run build        # static export → ./out
+npm run build        # production build → ./.next
 npm run test         # Vitest (engine + VOI unit tests)
 npm run typecheck    # tsc --noEmit
 npm run lint         # next lint

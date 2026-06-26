@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Logo } from "@/components/logo";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -28,7 +29,11 @@ function SiteHeader() {
         className="container flex h-14 items-center justify-between gap-4"
         aria-label="Primary"
       >
-        <Link href="/" className="font-semibold tracking-tight text-foreground">
+        <Link
+          href="/"
+          className="flex items-center gap-2 font-semibold tracking-tight text-foreground"
+        >
+          <Logo className="h-7 w-7 shrink-0" />
           Solve My Long COVID
         </Link>
         <ul className="flex items-center gap-1 text-sm">
